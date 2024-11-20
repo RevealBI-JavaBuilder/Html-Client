@@ -124,7 +124,6 @@
           try {
               const response = await fetch(API_BASE_URL);
               const visualizations = await response.json();
-              console.log("Fetched Visualizations:", visualizations); // Debug
               populateVisualizationList(visualizations);
           } catch (error) {
               console.error("Error fetching visualizations:", error);
@@ -182,7 +181,6 @@
         }
       }
 
-
       function addVisualization(event, vizJson) {
           event.stopPropagation();
           try {
@@ -191,7 +189,6 @@
                   console.error("Invalid Visualization: Missing dashboardFileName", viz);
                   return;
               }
-              console.log("Adding Visualization:", viz);
               selectedVisualizations.push(viz);
               generateDashboard();
           } catch (error) {
@@ -200,39 +197,25 @@
       }
 
       async function generateDashboard() {
-          console.log("Add Generated Dashboard");
-          console.log("Selected Visualizations:", selectedVisualizations);
-
           try {
               const dashboardDocument = new dom.RdashDocument("Generated Dashboard");
-
               for (const viz of selectedVisualizations) {
                   console.log("Processing visualization:", viz);
                   let sourceDoc = sourceDocs.get(viz.dashboardFileName);
                   
                   if (!sourceDoc) {
-                      
-                    console.log("Loading source document for:", viz.dashboardFileName);
-                      
                       sourceDoc = await dom.RdashDocument.load(viz.dashboardFileName);
-
-
                       if (!sourceDoc) {
                           throw new Error(`Failed to load source document: ${viz.dashboardFileName}`);
                       }
                       sourceDocs.set(viz.dashboardFileName, sourceDoc);
                   }
-                  
-                  console.log("Importing visualization ID:", viz.vizId);
-                  
-                  dashboardDocument.import(sourceDoc, viz.vizId);
+                dashboardDocument.import(sourceDoc, viz.vizId);
               }
-
               const rvDashboard = await dashboardDocument.toRVDashboard();
               if (!rvDashboard) {
                   throw new Error("Generated dashboard is null or undefined");
               }
-
               const revealView = new $.ig.RevealView(
                   document.getElementById("revealDashboard")
               );
@@ -242,7 +225,6 @@
               console.error("Error generating dashboard:", error);
           }
       }
-
       fetchVisualizations();
     </script>
   </body>
