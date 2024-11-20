@@ -11,4 +11,4 @@ To run the app:
 ## **Running App**
 Your running application should look like this:
 
-<img width="1723" alt="image" src="https://github.com/user-attachments/assets/11d0feee-63e4-40b7-9670-4f6c81a04832">
+<img width="1721" alt="image" src="https://github.com/user-attachments/assets/78fae750-c526-4211-bde7-8b3bd31f3a91">
