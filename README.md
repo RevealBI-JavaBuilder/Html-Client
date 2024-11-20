@@ -11,7 +11,7 @@ To run the app:
 ## **Running App**
 Your running application should look like this:
 
-<img width="1721" alt="image" src="https://github.com/user-attachments/assets/78fae750-c526-4211-bde7-8b3bd31f3a91">
+<img width="750" alt="image" src="https://github.com/user-attachments/assets/78fae750-c526-4211-bde7-8b3bd31f3a91">
 
 ---
 
@@ -125,16 +125,3 @@ Below are the explanations for key code blocks:
   - Bootstrap is used for grid layout.
 - **Scroll and Overflow**:
   - `.scrollable-list` ensures visualization list fits within the viewport.
-
----
-
-## Notes
-
-1. **Custom Endpoints**:
-   Ensure the backend API endpoints match the expected structure (e.g., JSON response with visualization metadata).
-2. **Cross-Origin Resource Sharing (CORS)**:
-   If testing locally, configure the server to handle CORS requests properly.
-
----
-
-Feel free to extend this document as you add features or make updates to the project.
