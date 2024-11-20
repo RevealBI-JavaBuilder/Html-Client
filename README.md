@@ -5,8 +5,8 @@ This is an HTML and JavaScript client that uses the Java server in this GitHub O
 ## **Usage**
 To run the app:
 
-- download and run the Java server app.
-- download the `dashboard-builder.html` and open. 
+- download and run the  [Java-Server](https://github.com/RevealBI-JavaBuilder/Java-Server) server app.
+- download the `dashboard-builder.html` in this repository and open. 
 
 ## **Running App**
 Your running application should look like this:
