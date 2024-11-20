@@ -104,23 +104,18 @@
 
     <script>
       
-      
+      // ** API to get the visualizations from your dashboards
       //const API_BASE_URL = "https://acmeanalyticsserver.azurewebsites.net/dashboards/visualizations";      
-
       const API_BASE_URL = "http://localhost:5111/reveal-api/dashboards/visualizations";      
-      
+
+      // ** note the /reveal-api suffix on the endpoint
       $.ig.RevealSdkSettings.setBaseUrl("http://localhost:5111/reveal-api");
-      //$.ig.RevealSdkSettings.setBaseUrl("http://localhost:5111/reveal-api");
       //$.ig.RevealSdkSettings.setBaseUrl("https://acmeanalyticsserver.azurewebsites.net");
 
-      // ** THIS WORKS
+      // ** Test with server or local app
       //const IMAGE_URL = 'https://acmeanalyticsserver.azurewebsites.net/images/png/';
-
-      // I WANT TO USE LOCAL IMAGES
       const IMAGE_URL = "http://localhost:5111/images/png/";
-
-
-
+      
       let selectedItem = null;
       let selectedVisualizations = [];
       const sourceDocs = new Map();
